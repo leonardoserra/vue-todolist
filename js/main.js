@@ -36,7 +36,7 @@ const { createApp } = Vue
             },
             {
               text: 'Ascolta un album nuovo al giorno',
-              done: false
+              done: true
             },
             {
               text: 'Studia il manuale del mpc',

@@ -46,7 +46,25 @@ nav button{
     background-color: rgb(176, 239, 255)     ;
     padding: 5px;
     box-shadow: 1px 1px rgb(78, 78, 78);
-
-
+    display: flex;   
 }
 
+.slot li{
+    list-style: none;
+}
+
+.f-grow{
+    flex-grow: 1;
+}
+
+.done{
+    text-decoration: line-through;
+}
+
+.x-box{
+    color: red;
+    border: 1px solid black;
+    width: 20px;
+    background-color: rgb(253, 253, 253);
+    font-weight: 700;
+}
