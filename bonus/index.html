@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Template...</title>
+        <link rel="icon" type="image/icon-x" href="./img/favicon.png" />
+        <link rel="stylesheet" href="./css/style.css"/>
+    </head>
+    <body>
+       
+        <div id="app">
+
+            <div class="container">
+                <header class="text-center">
+                    <img class="logo" src="./img/logo.png" />
+                </header>
+
+                <nav class="text-center pos-rel">
+                    <input v-model="newSlot.text" type="text" @keyup.enter="addSlot()" placeholder="inserisci nuovo obiettivo"/>
+                    <button type="button" @click="addSlot()" >Aggiungi</button>
+                    <div v-if="newSlot.text.length < 3" class="pos-abs error">Inserire almeno 3 caratteri..</div>
+                </nav>
+
+                <main>
+                    <div class="notes">
+                        <p class="slot" v-if="!todoList.length">Sei una persona migliore!</p>
+                        <div class="slot" v-for="(slot, index) in todoList">
+                            <li class="f-grow" @click="slot.done = !slot.done" :class="slot.done?'done':''">{{slot.text}}</li>
+                            <button type="button" class="x-box text-center" @click="removeSlot(index)">&#10005;</button>
+                        </div>
+                    </div>
+
+
+                </main>
+            </div>
+
+        </div>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script type="text/javascript" src="./js/main.js"></script>
+    </body>
+</html>
