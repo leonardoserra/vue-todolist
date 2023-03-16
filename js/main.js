@@ -29,7 +29,10 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        newSlot: '',
+        newSlot: {
+          text: '',
+          done: false
+        },
         todoList: [
           {
             text: 'Impara a suonare la darbuka',
@@ -56,6 +59,10 @@ const { createApp } = Vue
       },
       addSlot(){
         this.todoList.unshift(this.newSlot);
+        this.newSlot =  {
+                          text: '',
+                          done: false
+                        }
       }
     }
   }).mount('#app')
