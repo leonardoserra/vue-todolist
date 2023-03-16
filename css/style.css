@@ -4,6 +4,22 @@
     box-sizing: border-box;
 }
 
+.f-grow{
+    flex-grow: 1;
+}
+.pos-rel{
+    position: relative;
+}
+.pos-abs{
+    position: absolute;
+    
+}
+.error{
+    bottom: -5px;
+    left: 50%;
+    font-size: 12px;
+    color: red;
+}
 .container{
     width: 1000px;
     margin: auto;
@@ -33,6 +49,10 @@ nav button{
 
 }
 
+main{
+    margin-top: 10px;
+}
+
 .notes{
     border: 1px solid #666;
     padding: 40px;
@@ -54,9 +74,6 @@ nav button{
     cursor: pointer;
 }
 
-.f-grow{
-    flex-grow: 1;
-}
 
 .done{
     text-decoration: line-through;

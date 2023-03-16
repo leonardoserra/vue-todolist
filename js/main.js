@@ -58,11 +58,13 @@ const { createApp } = Vue
         this.todoList.splice(index,1)
       },
       addSlot(){
-        this.todoList.unshift(this.newSlot);
-        this.newSlot =  {
-                          text: '',
-                          done: false
-                        }
+        if(this.newSlot.text.length >= 3){
+          this.todoList.unshift(this.newSlot);
+          this.newSlot =  {
+                            text: '',
+                            done: false
+                          }
+        }
       }
     }
   }).mount('#app')

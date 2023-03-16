@@ -17,9 +17,10 @@
                     <img class="logo" src="./img/logo.png" />
                 </header>
 
-                <nav class="text-center">
+                <nav class="text-center pos-rel">
                     <input v-model="newSlot.text" type="text" @keyup.enter="addSlot()" placeholder="inserisci nuovo obiettivo"/>
                     <button type="button" @click="addSlot()" >Aggiungi</button>
+                    <div v-if="newSlot.text.length < 3" class="pos-abs error">Inserire almeno 3 caratteri..</div>
                 </nav>
 
                 <main>
