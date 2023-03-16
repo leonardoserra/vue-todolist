@@ -18,15 +18,15 @@
                 </header>
 
                 <nav class="text-center">
-                    <input v-model="newSlot.text" type="text" placeholder="inserisci nuovo obiettivo"/>
-                    <button type="button" @click="addSlot()">Aggiungi</button>
+                    <input v-model="newSlot.text" type="text" @keyup.enter="addSlot()" placeholder="inserisci nuovo obiettivo"/>
+                    <button type="button" @click="addSlot()" >Aggiungi</button>
                 </nav>
 
                 <main>
                     <div class="notes">
                         <p class="slot" v-if="!todoList.length">Sei una persona migliore!</p>
                         <div class="slot" v-for="(slot, index) in todoList">
-                            <li class="f-grow" :class="slot.done?'done':''">{{slot.text}}</li>
+                            <li class="f-grow" @click="slot.done = !slot.done" :class="slot.done?'done':''">{{slot.text}}</li>
                             <button type="button" class="x-box text-center" @click="removeSlot(index)">&#10005;</button>
                         </div>
                     </div>
