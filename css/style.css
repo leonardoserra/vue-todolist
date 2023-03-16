@@ -51,6 +51,7 @@ nav button{
 
 .slot li{
     list-style: none;
+    cursor: pointer;
 }
 
 .f-grow{
