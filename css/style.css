@@ -4,4 +4,46 @@
     box-sizing: border-box;
 }
 
+.container{
+    width: 1000px;
+    margin: auto;
+}
+.text-center{
+    text-align: center;
+}
+
+header{
+    padding-top: 20px;
+}
+.logo{
+    height: 60px;
+    background-color: rgb(127, 229, 255);
+}
+
+nav, nav input, nav button{
+    padding: 10px;
+}
+
+nav input{
+    width: 400px;
+}
+nav button{
+    margin-left: 10px;
+}
+
+.notes{
+    border: 1px solid #666;
+    padding: 40px;
+    /* height: 500px; */
+    border-radius: 20px;
+}
+
+.slot{
+    border-bottom: 1px solid #888;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background-color: rgb(127, 229, 255)     ;
+    padding: 5px;
+
+}
 
