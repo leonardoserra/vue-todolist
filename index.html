@@ -27,7 +27,7 @@
                         <p class="slot" v-if="!todoList.length">Sei una persona migliore!</p>
                         <div class="slot" v-for="(slot, index) in todoList">
                             <li class="f-grow" :class="slot.done?'done':''">{{slot.text}}</li>
-                            <button type="button" class="x-box text-center">&#10005;</button>
+                            <button type="button" class="x-box text-center" @click="removeSlot(index)">&#10005;</button>
                         </div>
                     </div>
 

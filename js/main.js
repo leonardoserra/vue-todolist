@@ -29,27 +29,29 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-          todoList: [
-            {
-              text: 'Impara a suonare la darbuka',
-              done: false
-            },
-            {
-              text: 'Ascolta un album nuovo al giorno',
-              done: true
-            },
-            {
-              text: 'Studia il manuale del mpc',
-              done: false
-            },
-            {
-              text: 'Mangia piú carbonara',
-              done: false
-            }
-            
-          ]
-
-            
+        todoList: [
+          {
+            text: 'Impara a suonare la darbuka',
+            done: false
+          },
+          {
+            text: 'Ascolta un album nuovo al giorno',
+            done: true
+          },
+          {
+            text: 'Studia il manuale del mpc',
+            done: false
+          },
+          {
+            text: 'Mangia piú carbonara',
+            done: false
+          } 
+        ]
+      }
+    },
+    methods:{
+      removeSlot(index){
+        this.todoList.splice(index,1)
       }
     }
   }).mount('#app')
