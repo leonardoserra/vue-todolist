@@ -29,6 +29,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
+        newSlot: '',
         todoList: [
           {
             text: 'Impara a suonare la darbuka',
@@ -52,6 +53,9 @@ const { createApp } = Vue
     methods:{
       removeSlot(index){
         this.todoList.splice(index,1)
+      },
+      addSlot(){
+        this.todoList.unshift(this.newSlot);
       }
     }
   }).mount('#app')

@@ -18,8 +18,8 @@
                 </header>
 
                 <nav class="text-center">
-                    <input type="text" placeholder="inserisci nuovo obiettivo"/>
-                    <button type="button">Aggiungi</button>
+                    <input v-model="newSlot" type="text" placeholder="inserisci nuovo obiettivo"/>
+                    <button type="button" @click="addSlot()">Aggiungi</button>
                 </nav>
 
                 <main>
