@@ -59,12 +59,12 @@ const { createApp } = Vue
       },
       addSlot(){
         if(this.newSlot.text.length >= 3){
-          this.todoList.unshift(this.newSlot);
-          this.newSlot =  {
-                            text: '',
-                            done: false
-                          }
+          this.todoList.unshift({...this.newSlot});
+          this.newSlot.text = '';
         }
+      },
+      invertValue(slot){
+        slot.done = !slot.done
       }
     }
   }).mount('#app')
